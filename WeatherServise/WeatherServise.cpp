@@ -1,13 +1,17 @@
 ﻿#include "JsonService.h"
 #include "Service.h"
 #include "Weather.h"
+#include "XmlService.h"
 
+#include <iostream>
 
 int main()
 {
     setlocale(LC_ALL, "Rus");
-    JsonService js;
-    Weather w = js.getWeather("weather.json");
+    XmlService js;
+    Weather w = js.getWeather("weather.xml");
+    JsonService xml;
+    Weather wr = xml.getWeather("weather.json");
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
