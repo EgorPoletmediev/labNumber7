@@ -2,10 +2,14 @@
 //
 
 #include <iostream>
+#include "Weather.h"
+#include "XmlService.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    setlocale(LC_ALL, "Rus");
+    XmlService js;
+    Weather w = js.getWeather("weather.xml");
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
